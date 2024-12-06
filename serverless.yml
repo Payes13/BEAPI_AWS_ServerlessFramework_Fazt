@@ -1,18 +1,18 @@
 # "org" ensures this Service is used with the correct Serverless Framework Access Key.
-org: vanhohenheim
+org: your organization
 # "service" is the name of this project. This will also be added to your AWS resource names.
 service: fazt-aws-serverless-framework
 
 provider:
   name: aws
   runtime: nodejs20.x
-  region: ca-central-1
+  region: your region
   iamRoleStatements:
     - Effect: Allow
       Action:
         - dynamodb:*
       Resource:
-        - arn:aws:dynamodb:ca-central-1:532909854947:table/TaskTable
+        - your DynamoDB arn
 
 functions:
   hello:
